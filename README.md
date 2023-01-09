@@ -35,3 +35,53 @@ There are five main requirements for the project:
 * Functions must fail fast - use require() at the start of functions.
 * Scaffolding code is provided but you are free to replace it qith your own code.
 * Have fun learning!
+
+
+# How to deploy this project using Docker?
+
+### Installing...
+
+<code>docker build -t flight1 .</code><br />
+<code>docker run -t -d -p 9545:9545 -p 8000:8000 flight1</code>
+
+### Running inside the container ...
+
+you may want to se the container ID 
+
+<code>docekr ps</code>
+
+Get iside the container
+
+<code>docker exec -it [contaner id] bash</code>
+
+once inside the container run truffle
+
+<code>truffle develop</code>
+<code>compile</code>e3
+<code>migrate --reset</code>
+
+try to run testings again of some test fails
+<code>test</code>
+
+### runnig the app
+
+I recommend you to open a new terminal window and type
+
+<code>npm run dapp</code>
+
+
+http://localhost:8000/
+
+
+### Depelop server
+
+first reset truffle artifacts
+
+<code>truffle develop</code>
+
+you can test oracles (you may try a few times if you can't get to pass all testings)
+
+<code>truffle test test/oracles.js</code>
+
+
+
