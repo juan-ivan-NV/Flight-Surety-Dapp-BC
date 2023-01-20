@@ -57,7 +57,7 @@ Get iside the container
 once inside the container run truffle
 
 <code>truffle develop</code>
-<code>compile</code>e3
+<code>compile</code>
 <code>migrate --reset</code>
 
 try to run testings again of some test fails
@@ -69,9 +69,10 @@ I recommend you to open a new terminal window and type
 
 <code>npm run dapp</code>
 
-
 http://localhost:8000/
 
+
+* If you have an error like "incorrect nounce" try resetting the metamask account.
 
 ### Depelop server
 
