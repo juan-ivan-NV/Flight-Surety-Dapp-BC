@@ -17,9 +17,9 @@ Get iside the container
 
 <code>docker exec -it [contaner id] bash</code>
 
-When you are inside the container run truffle
+Inside the container run truffle
 
-<code>truffle compile</code>
+<code>truffle develop</code>
 <code>compile</code>
 <code>migrate --reset</code>
 
@@ -27,27 +27,37 @@ Try to run testings again if any test fails
 
 <code>test</code>
 
-Another path wothout entering truffle cli
+Another path to test wothout entering truffle cli
 
-<code>truffle develop</code>
-<code>truffle test ./test/flightSurety.js</code>
-<code>truffle test ./test/oracles.js</code>
+<code>truffle compile</code>
+<code>truffle test test/flightSurety.js</code>
+<code>truffle test test/oracles.js</code>
 
 ### runnig the app
 
-I recommend you to open a new terminal window and type
+For this step we will need 2 terminals one for one to start truffle and another to run the dapp
 
-<code>truffle migrate</code>
+In one terminal type <code>truffle develop</code>
+<code>migrate</code>
+
+On another terminal type
 <code>npm run dapp</code>
 
 http://localhost:8000/
 
 
-* If you have an error like "incorrect nounce" try resetting the metamask account.
-
 <center>
 <img src='images/Dapp_main.png'/>
 <figcaption>Dapp UI</figcaption></center>
+
+
+You maight face different issues while using the Dapp UI, but you can try...
+
+* Resetting the metamask account.
+
+* Doing truffle migrate --reset
+
+* Refreshing the Dapp UI
 
 ## Depelop server
 

@@ -56,6 +56,16 @@ contract FlightSuretyApp {
 
     /***************************************** CONSTRUCTOR ***************************************/
     
+    struct Flight {
+        uint8 statusCode;
+        uint256 timestamp;
+        address airline;
+        string flight;
+    }
+
+    mapping(bytes32 => Flight) private flights;
+    bytes32[] private flightsKeyList;
+
     constructor(address dataContractAddress) public
     {
         contractOwner = msg.sender;
@@ -184,16 +194,6 @@ contract FlightSuretyApp {
 
 
     /********************************** FLIGHTS FUNCTIONS ************************************/
-
-    struct Flight {
-        uint8 statusCode;
-        string flight;
-        uint256 timestamp;
-        address airline;
-    }
-
-    mapping(bytes32 => Flight) private flights;
-    bytes32[] private flightsKeyList;
 
     event FlightStatusProcessed(address airline, string flight, uint8 statusCode);
 
